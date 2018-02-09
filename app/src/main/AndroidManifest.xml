@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.dayanandakishore.trial1">
+
+    <uses-permission android:name="com.android.alarm.permission.SET_ALARM" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/cepstrum"
+        android:label="@string/app_name"
+        android:launchMode="singleTop"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".MainActivity_settings"
+            android:label="@string/title_activity_main_settings"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY "
+                android:value=".MainActivity" />
+
+            <intent-filter>
+                <action android:name="com.example.dayanandakishore.trial1.MainActivity_settings" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".MyAlertDialog"
+            android:label="@string/app_name"
+            android:launchMode="singleInstance"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Dialog">
+            <intent-filter>
+                <action android:name="com.example.dayanandakishore.trial1.MyAlertDialog" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <service
+            android:name=".AlarmService"
+            android:enabled="true"
+            android:exported="true"
+            />
+
+        <receiver
+            android:name=".myAlarm"
+            android:process=":remote">
+            <intent-filter>
+                <action android:name="com.example.dayanandakishore.trail1.MyBroadcastReceiver" />
+            </intent-filter>
+        </receiver>
+
+       <!-- <receiver
+            android:name=".myNotifications"
+            android:enabled="true" />
+-->
+        <service
+            android:name=".MyService"
+            android:enabled="true"
+            android:exported="true"
+            android:launchMode="singleTop">
+
+        </service>
+    </application>
+
+</manifest>

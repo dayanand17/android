@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+
+    <ToggleButton
+        android:id="@+id/Alarm_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="18dp"
+        android:layout_marginRight="18dp"
+        android:layout_marginTop="81dp"
+        android:text="ToggleButton" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:layout_alignBaseline="@+id/Alarm_button"
+        android:layout_alignBottom="@+id/Alarm_button"
+        android:layout_alignLeft="@+id/alarm_text"
+        android:layout_alignStart="@+id/alarm_text"
+        android:text="Alarm"
+        android:textColor="@color/colorPrimary"
+        android:textSize="20dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/alarm_text"
+        android:layout_width="180dp"
+        android:layout_height="40dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/textView3"
+        android:layout_marginLeft="15dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="35dp"
+        android:text="How many minutes before should the alarm start?"
+        android:textStyle="italic"
+        android:visibility="gone" />
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/Alarm_button"
+        android:layout_alignStart="@+id/Alarm_button"
+        android:layout_alignTop="@+id/alarm_text"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/alarm_text2"
+        android:layout_alignStart="@+id/alarm_text2"
+        android:layout_below="@+id/alarm_text2"
+        android:layout_marginTop="55dp"
+        android:text="Notification"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:visibility="visible" />
+
+    <ToggleButton
+        android:id="@+id/notifications_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textView5"
+        android:layout_alignBottom="@+id/textView5"
+        android:layout_alignLeft="@+id/spinner2"
+        android:layout_alignStart="@+id/spinner2"
+        android:text="ToggleButton" />
+
+    <TextView
+        android:id="@+id/notify_text1"
+        android:layout_width="180dp"
+        android:layout_height="40dp"
+        android:layout_alignLeft="@+id/textView5"
+        android:layout_alignStart="@+id/textView5"
+        android:layout_below="@+id/textView5"
+        android:layout_marginTop="42dp"
+        android:text="How many minutes before should the notifications start?"
+        android:textStyle="italic"
+        android:visibility="gone" />
+
+    <Spinner
+        android:id="@+id/spinner3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/notifications_button"
+        android:layout_alignStart="@+id/notifications_button"
+        android:layout_alignTop="@+id/notify_text1"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/alarm_text2"
+        android:layout_width="180dp"
+        android:layout_height="40dp"
+        android:layout_alignLeft="@+id/alarm_text"
+        android:layout_alignStart="@+id/alarm_text"
+        android:layout_below="@+id/alarm_text"
+        android:layout_marginTop="28dp"
+        android:text="Should the Alarm repeat for every event?"
+        android:textStyle="italic"
+        android:visibility="gone" />
+
+    <Spinner
+        android:id="@+id/spinner2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/spinner"
+        android:layout_alignStart="@+id/spinner"
+        android:layout_alignTop="@+id/alarm_text2"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/notify_text2"
+        android:layout_width="180dp"
+        android:layout_height="40dp"
+        android:layout_alignLeft="@+id/notify_text1"
+        android:layout_alignStart="@+id/notify_text1"
+        android:layout_below="@+id/notify_text1"
+        android:layout_marginTop="49dp"
+        android:text="Should the notifications repeat for every event?"
+        android:textStyle="italic"
+        android:visibility="gone" />
+
+    <Spinner
+        android:id="@+id/spinner4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/spinner3"
+        android:layout_alignStart="@+id/spinner3"
+        android:layout_alignTop="@+id/notify_text2"
+        android:visibility="gone" />
+</RelativeLayout>
+
+
+
+
+
+
+
+
+
+
+
